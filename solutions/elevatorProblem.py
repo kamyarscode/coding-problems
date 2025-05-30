@@ -40,8 +40,8 @@ Space Complexity:
 - O(1) when setting output array of (int, []).
 
 Parameters:
-starting_floor: int - integer representing what floor elevator starts on.
-floors_to_visit: list - all the floors to visit in that order.
+starting_floor: int - Integer representing what floor elevator starts on.
+floors_to_visit: list - All the floors to visit in that order.
 
 Returns: 
 Tuple[int, list[int]] - Tuple representing visitation info in format (total travel time in seconds, [floors visited])
@@ -79,7 +79,7 @@ def elevator(starting_floor: int, floors_to_visit: List[int]) -> Tuple[int, List
 
     # Look at each floor in order and explicitly traverse through loop.
     for floor in floors_to_visit: 
-        # Start from current floor and navigate to next floor. Can simplify this logic using abs(current_floor - floor) * 10 too. 
+        # Start from current floor and navigate to next floor. Can simplify this logic using abs(current_floor - floor) * TIME_PER_FLOOR too. 
         # going down
         if current_floor > floor:
             # calculate difference in floors and multiply by 10 for time traveled. 
